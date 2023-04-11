@@ -1,0 +1,7 @@
+const express=require('express')
+const app=express()
+const body=require('body-parser')
+const dbController=require('./dbController')
+app.use(body.json())
+app.get('/', dbController.dbController)
+app.listen(3000)
